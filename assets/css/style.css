@@ -1,0 +1,514 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #0f172a;    
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+}
+
+.scroll {
+    scroll-behavior: smooth;
+}
+
+.dark {
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+.light {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #3b82f6;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+/* Header */
+header{
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 20;
+}
+
+nav{
+    z-index: 999999;
+    backdrop-filter: brightness(0.8) blur(8px);
+    position: fixed;
+    width: 100%;
+    color: #fff;
+}
+
+.container{
+    margin: 0 50px;
+}
+
+nav .brand {
+    float: left;
+    max-width: 100%;
+    height: auto;
+}
+
+nav .menu {
+    float: right;
+    padding: 8px 0;
+    z-index: 999999;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav li a:hover {
+    color: #3b82f6;
+}
+
+.jumbotron {
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotext {
+    padding: 0;
+    backdrop-filter: blur(2px);
+    border-radius: 100%;
+    text-shadow: #000 2px 2px;
+}
+
+.jumbotext h1 {
+    font-size: 3.5em;
+}
+
+.jumbotext p {
+    font-size: 1.5em;
+}
+
+.jumbotext h1, p {
+    opacity: 0.8;
+}
+
+.hamburger {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.line-1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    height: 2px;
+    width: 30px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+  
+.line-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    height: 2px;
+    width: 15px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+  
+.line-3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    height: 2px;
+    width: 30px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+  
+.hamburger-active > span:nth-child(1) {
+    width: 30px;
+    --tw-rotate: 45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+  
+.hamburger-active > span:nth-child(2) {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+  
+.hamburger-active > span:nth-child(3) {
+    width: 30px;
+    --tw-rotate: -45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.faded {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* main */
+.flex {
+    display: flex;
+}
+
+.block{
+    display: block!important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.konten {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.konten h1 {
+    text-align: justify;
+    text-align: center;
+}
+
+.konten p {
+    justify-content: center;
+    padding: 2em;
+}
+
+iframe {
+    border: none;
+    padding-top: 2em;
+    padding-left: 1em;
+    float: right;
+    width: 50%;
+    height: 400px;
+}
+
+.table-g {
+    margin: 2em;
+}
+
+.card-wisata {
+    margin-top: 2.5rem;
+    width: 33.333333%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+
+.card-wisata:hover {
+    transform: translateY(-5%);
+}
+
+.card-isi {
+    overflow: hidden;
+    background-color: #0f172a;
+    border-radius: 0.75rem;
+}
+
+.card-text {
+    padding: 1rem;
+    text-align: center;
+}
+
+.img-post {
+    filter: brightness(1);
+    padding: 2em;
+    border-radius: 10%;
+    float: left;
+    width: 50%;
+}
+
+.transisi {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+  
+.kembali {
+    position: relative;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.bg-sumber {
+    background-color: #0f172a;
+    color: #cbd5e1;
+}
+
+.bg-dark {
+    background-color: #0f172a;
+}
+
+.bg-light {
+    background-color: #f1f5f9;
+}
+
+.card {
+    backdrop-filter: brightness(0.6) blur(5px);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    padding: 1em;
+    color: #fff;
+    text-shadow: #000 1px 1px;
+    box-shadow: 0px 10px 100px -10px #000;
+}
+
+.card:hover {
+    backdrop-filter: brightness(0.5) blur(5px);
+    transform: translateY(-5%);
+    box-shadow: 0px 10px 100px -10px #000;
+}
+
+.card-content p{
+    padding-top: 0;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.profile-image {
+    height: 300px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    padding: 0;
+}
+
+.profile-image:hover {
+    filter: blur(1px);
+    transform: scaleX(-1);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: #0f172a;
+    padding: 1.5em;
+    border-top: 1px solid #fff;
+}
+
+.to-top {
+    height: 3rem;
+    width: 3rem;
+    right: 1rem;
+    bottom: 1rem;
+    position: fixed;
+    background-color: #3b82f6;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transform: rotate(45deg);
+}
+
+.to-top:hover {
+    opacity: 0.5;
+    transform: rotate(0deg);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.dark-mode {
+    height: 3rem;
+    width: 3rem;
+    right: 1rem;
+    bottom: 5rem;
+    position: fixed;
+    background-color: #3b82f6;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transform: rotate(0deg);
+    z-index: 99999999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.dark-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.dark-switch {
+    background-color: #fff;
+}
+
+.light-switch {
+    background-color: #000;
+}
+
+.dark-mode:hover {
+    transform: rotate(360deg);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+a svg {
+    position: fixed;
+    height: 1rem;
+}
+
+.dark-svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* responsive */
+@media screen and (max-width: 640px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .profile-image {
+        height: 180px;
+    }
+
+    .konten {
+        padding: 0;
+    }
+
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .img-post {
+        float: none;
+        width: 100%;
+    }
+
+    .konten p {
+        padding-top: 0;
+    }
+
+    iframe {
+        float: none;
+        width: 100%;
+        padding-right: 1em;
+    }
+
+    .table-g {
+        margin-top: 0;
+    }
+
+    .card-wisata {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        padding-top: 2.3rem;
+        padding-bottom: 2.3rem;
+    }
+
+    nav .menu {
+        margin-top: 2rem;
+        display: none;
+    }
+}
